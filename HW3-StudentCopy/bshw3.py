@@ -23,29 +23,28 @@ from bs4 import BeautifulSoup
 
 f = open('webpage.html', 'w')
 
-base_url = 'https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions'
+base_url = 'http://collemc.people.si.umich.edu/data/bshw3StarterFile.html'
 
 html_doc = urllib.request.urlopen(base_url).read()
 
 soup_1 = BeautifulSoup(html_doc, 'html.parser')
 
-filename = '/Users/jules.wu/Desktop/Project.3/HW3-StudentCopy/media/logo.png'
+filename = '/Users/jules.wu/Desktop/Real.3/HW3-StudentCopy/media/logo.png'
+my_pic = '/Users/jules.wu/Desktop/Real.3/HW3-StudentCopy/media/Pic.png'
 
 visible_text = (soup_1.prettify())
 #print (visible_text)
 
-im_str = visible_text.replace('/sites/default/themes/umsi/imgs/logo.png',filename)
+im_str = visible_text.replace('logo2.png',filename)
+im_str3 = im_str.replace('https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg', my_pic)
 
-text = im_str.replace('students', 'AMAZING student')
+text = im_str3.replace('students', 'AMAZING students')
 
 #images = re.findall('^/sites/default/themes/umsi/img\S+', text)
 #print (images)
 
 f.write(text)
 f.close()
-
-#filename = '/Users/jules.wu/Desktop/Project.3/HW3-StudentCopy/webpage.html'
-#webbrowser.open_new_tab(filename)
 
 ###
 #Find the picture and change img source (specific pic) and replace it with your picture
