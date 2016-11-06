@@ -1,7 +1,7 @@
 #name: Julia Wu
 #UMID: 38632603
 #Unique name: shuyue
-#References: 
+#References: madlibgenerator.py, nltk book website
 
 import nltk
 import random
