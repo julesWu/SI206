@@ -23,18 +23,30 @@ auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
 #Now we can Create Tweets, Delete Tweets, and Find Twitter Users
 
-public_tweets = api.search('Auburn Tigers')
+#prompts user for search term
+search_term = input("What term would you like to search: ")
 
+#searches twitter for the search_term
+public_tweets = api.search(search_term)
+
+#initialize count for subjectivity to 0
 total_subj = 0
+
+#initialize count for polarity to 0
 total_polar = 0
 
+#a for loop to iterate through the tweets in public_tweets
 for tweet in public_tweets:
+	#prints out the tweet
 	print(tweet.text)
+	#analyzes the tweet for sentiments
 	analysis = TextBlob(tweet.text)
+	#adds the subjectivity of the tweet to total_subj
 	total_subj += analysis.sentiment.subjectivity
+	#adds the polarity of the tweet to total_polar
 	total_polar += analysis.sentiment.polarity
-	#print(analysis.sentiment)
-
+	
+#outputs the average subjectivity and average polarity
 print("Average subjectivity is", end = " ")
 print (total_subj / len(public_tweets))
 print("Average polarity is", end = " ")
