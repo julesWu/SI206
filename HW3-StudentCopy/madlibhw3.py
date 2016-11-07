@@ -27,10 +27,13 @@ print("START*******")
 
 debug = False
 
+#import text2 which is sense and sensability
 sense = nltk.corpus.gutenberg.raw('austen-sense.txt')
-#print (sense[0:150])
+
+#break sense into tokens
 tokens = nltk.word_tokenize(sense)
 print("TOKENS")
+#print the first 150 tokens
 print(tokens[0:150])
 tagged_tokens = nltk.pos_tag(tokens[:150]) # gives us a tagged list of tuples
 #print("TAGGED TOKENS")
@@ -40,7 +43,9 @@ tagged_tokens = nltk.pos_tag(tokens[:150]) # gives us a tagged list of tuples
 	#for tup in tagged_tokens[:5]:
 		#print (tup)
 
+#dictionary to identify parts of speech
 tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective", "VBD": "a past-tense verb"}
+#replacing parts of speech
 substitution_probabilities = {"NN":.15,"NNS":.1,"VB":.1,"JJ":.1, "VBD":.1}
 
 def spaced(word):
