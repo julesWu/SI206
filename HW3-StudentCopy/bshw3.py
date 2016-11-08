@@ -1,7 +1,7 @@
 #name: Julia Wu
 #UMID: 38632603
 #Unique name: shuyue
-#References: 
+#References: Colleen Office Hours
 
 import requests
 import urllib.request, urllib.parse, urllib.error
