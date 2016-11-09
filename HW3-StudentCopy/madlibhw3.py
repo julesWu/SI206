@@ -48,6 +48,7 @@ tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective",
 #replacing parts of speech
 substitution_probabilities = {"NN":.15,"NNS":.1,"VB":.1,"JJ":.1, "VBD":.1}
 
+#code taken from madlibgenerator.py
 def spaced(word):
 	if word in [",", ".", "?", "!", ":"]:
 		return word
