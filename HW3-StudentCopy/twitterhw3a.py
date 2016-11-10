@@ -1,3 +1,8 @@
+#Name: Julia Wu
+#UMID: 38632603
+#Unique Name: shuyue
+#References: Used twittercode files
+
 # Write a Python file that uploads an image to your 
 # Twitter account.  Make sure to use the 
 # hashtags #UMSI-206 #Proj3 in the tweet.
