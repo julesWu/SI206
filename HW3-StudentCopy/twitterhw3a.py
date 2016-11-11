@@ -32,7 +32,7 @@ api = get_api()
 tweet = "UMICH looking lovely as always #UMSI-206 #Proj3"
 
 #path of the picture I want to upload
-filename = '/Users/jules.wu/Desktop/Pic.jpg'
+filename = 'media/Pic.jpg'
 
 #uploads the tweet and picture onto Itwitter
 status = api.update_with_media(filename, status = tweet)
