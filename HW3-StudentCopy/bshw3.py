@@ -33,10 +33,10 @@ html_doc = urllib.request.urlopen(base_url).read()
 soup_1 = BeautifulSoup(html_doc, 'html.parser')
 
 #Path of the logo picture Collen wanted us to use.
-filename = '/Users/jules.wu/Desktop/Real.3/HW3-StudentCopy/media/logo.png'
+filename = 'media/logo.png'
 
 #Path of the picture of ourselves that we were supposed to use
-my_pic = '/Users/jules.wu/Desktop/Real.3/HW3-StudentCopy/media/Pic.png'
+my_pic = 'media/Pic.png'
 
 #makes the code of the base_url page pretty (readable)
 visible_text = (soup_1.prettify())
